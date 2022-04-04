@@ -1,0 +1,41 @@
+#Так же комманда show проработанна 
+
+help = """
+Help - напечатать справку по программе .
+add - добавить задачу в список
+show  напечатать все задачи
+exit - выход"""
+
+todays =[]
+tomorrows =[]
+others =[]
+
+run = True
+
+while run:
+  command =input("напечатать команду : ")
+  if command == "help":
+    print(help)
+  elif command == "show":
+    print("Задачи на today", todays)
+    print("Задачи на tomorrow", tomorrows)
+    print("Задачи на other", others)
+  elif command == "add":
+    print("На какой день вы хотите добавить задачу. today, tomorrow, other?")
+  elif command == "today":
+    today = input("Введиите название задачи")
+    todays.append(today)
+    print("Задача добавлена на today успешно добавлена")\
+  
+  elif command == "other":
+    other = input("Введите название задачи: ")
+    others.append(other)
+    print("Задача на other успешно добавлена")
+
+  elif command == "tomorrow":
+    tomorrow = input("Введите название задачи: ")
+    tomorrows.append(tomorrow)
+    print("Задача на tomorrow успешно добавлена")
+  elif command == "exit":
+    print("Пока пока")
+    break
