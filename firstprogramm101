@@ -1,0 +1,23 @@
+help = """
+Help - напечатать справку по программе .
+add- добавить задачу в список
+show  напечатать все задачи
+exit - выход"""
+
+tasks =[]
+
+run = True
+
+while run:
+  command =input("напечатать команду : ")
+  if command == "help":
+    print(help)
+  elif command == "show":
+    print(tasks)
+  elif command == "add":
+    task = input("Введиите название задачи")
+    tasks.append(task)
+    print("Задача добавлена")
+  elif command == "exit":
+    print("Пока пока")
+    break
